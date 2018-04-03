@@ -155,7 +155,7 @@ public class SessionConnection {
 						Thread.sleep(3000L);
 						continue;
 					} catch (InterruptedException var4) {
-						;
+
 					}
 				}
 
