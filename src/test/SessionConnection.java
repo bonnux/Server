@@ -20,6 +20,7 @@ public class SessionConnection {
 	private long mlLastRcvDataTime = System.currentTimeMillis();
 	private long mlLastSendDataTime = System.currentTimeMillis();
 
+	//建立连接
 	public SessionConnection(Socket mClient, SessionConnection.SessionListener mSessionListener) {
 		this.mClient = mClient;
 		this.mSessionListener = mSessionListener;
@@ -34,14 +35,8 @@ public class SessionConnection {
 		this.mListSend = new ArrayList();
 	}
 
-	public Socket getmClient() {
-		return this.mClient;
-	}
 
-	public void setmClient(Socket mClient) {
-		this.mClient = mClient;
-	}
-
+	//启动连接，和其中的读写线程
 	public void registerSession() {
 		this.mReadThread = new SessionConnection.ReadThread();
 		this.mReadThread.start();
@@ -51,6 +46,7 @@ public class SessionConnection {
 		this.mSessionListener.addSessionConnection(this);
 	}
 
+	//断开连接
 	public void releaseConnection() {
 		this.mReadThread.interrupt();
 		this.mWriteThread.interrupt();
@@ -67,30 +63,7 @@ public class SessionConnection {
 
 	}
 
-	public void sendDate(String obj) {
-		byte[] buf = obj.getBytes();
-		this.mListSend.add(buf);
-	}
-
-	public void sendXT() {
-		long TimeOut = Math.abs(System.currentTimeMillis() - this.mlLastSendDataTime);
-		if (TimeOut >= 6000L) {
-			this.mlLastSendDataTime = System.currentTimeMillis();
-			this.sendDate("xtb");
-		}
-
-	}
-
-	public boolean tryToReleaseConnect2TimeOut() {
-		boolean bRet = false;
-		boolean bTimeOut = Math.abs(System.currentTimeMillis() - this.mlLastRcvDataTime) > 18000L;
-		if (bTimeOut) {
-			bRet = true;
-		}
-
-		return bRet;
-	}
-
+	//读线程
 	private class ReadThread extends Thread {
 		private ReadThread() {
 		}
@@ -118,12 +91,7 @@ public class SessionConnection {
 		}
 	}
 
-	public interface SessionListener {
-		void addSessionConnection(SessionConnection var1);
-
-		void removeSessionConnection(SessionConnection var1);
-	}
-
+	//写线程
 	private class WriteThread extends Thread {
 		private WriteThread() {
 		}
@@ -163,4 +131,48 @@ public class SessionConnection {
 			}
 		}
 	}
+
+	//获取客户端信息
+	public Socket getmClient() {
+		return this.mClient;
+	}
+
+	public void setmClient(Socket mClient) {
+		this.mClient = mClient;
+	}
+
+	//监听器
+	public interface SessionListener {
+		void addSessionConnection(SessionConnection var1);
+
+		void removeSessionConnection(SessionConnection var1);
+	}
+
+	//超时的话，断开连接
+	public boolean tryToReleaseConnect2TimeOut() {
+		boolean bRet = false;
+		boolean bTimeOut = Math.abs(System.currentTimeMillis() - this.mlLastRcvDataTime) > 18000L;
+		if (bTimeOut) {
+			bRet = true;
+		}
+
+		return bRet;
+	}
+
+	//发送字符串
+	public void sendDate(String obj) {
+		byte[] buf = obj.getBytes();
+		this.mListSend.add(buf);
+	}
+
+	//发送心跳包
+	public void sendXT() {
+		long TimeOut = Math.abs(System.currentTimeMillis() - this.mlLastSendDataTime);
+		if (TimeOut >= 6000L) {
+			this.mlLastSendDataTime = System.currentTimeMillis();
+			this.sendDate("xtb");
+		}
+
+	}
+
 }
