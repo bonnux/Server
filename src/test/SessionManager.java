@@ -11,6 +11,7 @@ public class SessionManager extends Thread implements SessionListener {
 	public SessionManager() {
 	}
 
+	//添加新的线程
 	public synchronized void addSessionConnection(SessionConnection mSessionConnection) {
 		this.mClientList.add(mSessionConnection);
 		Iterator var3 = this.mClientList.iterator();
@@ -23,6 +24,7 @@ public class SessionManager extends Thread implements SessionListener {
 
 	}
 
+	//撤销线程
 	public synchronized void removeSessionConnection(SessionConnection mSessionConnection) {
 		boolean isExit = false;
 		Iterator var4 = this.mClientList.iterator();
@@ -41,6 +43,7 @@ public class SessionManager extends Thread implements SessionListener {
 
 	}
 
+	//
 	public void run() {
 		while(true) {
 			if (!this.isInterrupted()) {
@@ -55,13 +58,11 @@ public class SessionManager extends Thread implements SessionListener {
 						break;
 					}
 				}
-
 				if (delClient != null) {
 					this.mClientList.remove(delClient);
 					delClient = null;
 					continue;
 				}
-
 				try {
 					Thread.sleep(1000L);
 					continue;
@@ -69,7 +70,6 @@ public class SessionManager extends Thread implements SessionListener {
 
 				}
 			}
-
 			return;
 		}
 	}

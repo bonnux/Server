@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50b8f703-3bdf-4dd8-ad3a-d25ec7146b96" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Server/test/ServerMainThread.class" afterPath="$PROJECT_DIR$/out/production/Server/test/ServerMainThread.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Server/test/SessionConnection$ReadThread.class" afterPath="$PROJECT_DIR$/out/production/Server/test/SessionConnection$ReadThread.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Server/test/SessionConnection$WriteThread.class" afterPath="$PROJECT_DIR$/out/production/Server/test/SessionConnection$WriteThread.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Server/test/SessionConnection.class" afterPath="$PROJECT_DIR$/out/production/Server/test/SessionConnection.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Server/test/SessionManager.class" afterPath="$PROJECT_DIR$/out/production/Server/test/SessionManager.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/ServerMainThread.java" afterPath="$PROJECT_DIR$/src/test/ServerMainThread.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/SessionConnection.java" afterPath="$PROJECT_DIR$/src/test/SessionConnection.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/SessionManager.java" afterPath="$PROJECT_DIR$/src/test/SessionManager.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,14 +21,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.45630372">
+    <splitter split-orientation="horizontal" split-proportion="0.26263463">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="ServerMainThread.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/test/ServerMainThread.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="242">
-                  <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+                <state relative-caret-position="224">
+                  <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
                   <folding />
                 </state>
               </provider>
@@ -31,11 +38,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="SessionManager.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="SessionManager.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/test/SessionManager.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="286">
-                  <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+                <state relative-caret-position="1049">
+                  <caret line="57" column="24" lean-forward="true" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -43,11 +50,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="SessionConnection.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="SessionConnection.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/test/SessionConnection.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1144">
-                  <caret line="57" column="28" lean-forward="false" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
+                <state relative-caret-position="327">
+                  <caret line="128" column="16" lean-forward="false" selection-start-line="128" selection-start-column="16" selection-end-line="128" selection-end-column="16" />
                   <folding />
                 </state>
               </provider>
@@ -69,6 +76,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/test/SessionManager.java" />
+        <option value="$PROJECT_DIR$/src/test/ServerMainThread.java" />
         <option value="$PROJECT_DIR$/src/test/SessionConnection.java" />
       </list>
     </option>
@@ -80,8 +88,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="363" />
     <option name="y" value="23" />
-    <option name="width" value="1440" />
+    <option name="width" value="1077" />
     <option name="height" value="839" />
   </component>
   <component name="ProjectView">
@@ -272,15 +281,15 @@
       <workItem from="1523433761137" duration="1271000" />
       <workItem from="1523440435279" duration="634000" />
       <workItem from="1523880006229" duration="1197000" />
-      <workItem from="1523947460846" duration="1362000" />
+      <workItem from="1523947460846" duration="8557000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7058000" />
+    <option name="totallyTimeSpent" value="14253000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="839" extended-state="6" />
+    <frame x="363" y="23" width="1077" height="839" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -587,24 +596,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/SessionConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1144">
-          <caret line="57" column="28" lean-forward="false" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/SessionManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/StaticValue.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
@@ -613,10 +604,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/SessionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1049">
+          <caret line="57" column="24" lean-forward="true" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/ServerMainThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+        <state relative-caret-position="224">
+          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/SessionConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="128" column="16" lean-forward="false" selection-start-line="128" selection-start-column="16" selection-end-line="128" selection-end-column="16" />
           <folding />
         </state>
       </provider>

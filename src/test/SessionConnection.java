@@ -20,6 +20,13 @@ public class SessionConnection {
 	private long mlLastRcvDataTime = System.currentTimeMillis();
 	private long mlLastSendDataTime = System.currentTimeMillis();
 
+	//对应manager，manager实际是一个线程
+	public interface SessionListener {
+		void addSessionConnection(SessionConnection var1);
+
+		void removeSessionConnection(SessionConnection var1);
+	}
+
 	//建立连接
 	public SessionConnection(Socket mClient, SessionConnection.SessionListener mSessionListener) {
 		this.mClient = mClient;
@@ -120,7 +127,7 @@ public class SessionConnection {
 					}
 
 					try {
-						Thread.sleep(3000L);
+						Thread.sleep(5000L);
 						continue;
 					} catch (InterruptedException var4) {
 
@@ -139,13 +146,6 @@ public class SessionConnection {
 
 	public void setmClient(Socket mClient) {
 		this.mClient = mClient;
-	}
-
-	//监听器
-	public interface SessionListener {
-		void addSessionConnection(SessionConnection var1);
-
-		void removeSessionConnection(SessionConnection var1);
 	}
 
 	//超时的话，断开连接
